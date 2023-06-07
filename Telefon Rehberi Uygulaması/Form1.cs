@@ -166,5 +166,10 @@ namespace Telefon_Rehberi_Uygulaması
             textBox4.Text = "";
             textBox5.Text = "";
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listele();
+        }
     }
 }
