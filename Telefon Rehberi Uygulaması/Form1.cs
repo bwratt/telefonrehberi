@@ -45,5 +45,14 @@ namespace Telefon_Rehberi_Uygulaması
         {
             listele();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            veritablosu.Clear();
+
+            OleDbDataAdapter siringa = new OleDbDataAdapter("select * from Tablo1 where Isim like '" + textBox1.Text + "%'", bag);
+            siringa.Fill(veritablosu);
+            dataGridView1.DataSource = veritablosu;
+        }
     }
 }
