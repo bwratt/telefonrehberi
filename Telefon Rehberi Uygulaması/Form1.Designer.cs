@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 149);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // label2
             // 
@@ -98,9 +100,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(372, 228);
+            this.button2.Location = new System.Drawing.Point(394, 228);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
+            this.button2.Size = new System.Drawing.Size(112, 23);
             this.button2.TabIndex = 6;
             this.button2.Text = "Kişi Ekle";
             this.button2.UseVisualStyleBackColor = true;
@@ -141,8 +143,9 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(153, 287);
+            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 20);
+            this.textBox5.Size = new System.Drawing.Size(169, 58);
             this.textBox5.TabIndex = 12;
             // 
             // label5
@@ -156,28 +159,40 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(372, 254);
+            this.button3.Location = new System.Drawing.Point(394, 254);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 23);
+            this.button3.Size = new System.Drawing.Size(112, 23);
             this.button3.TabIndex = 13;
             this.button3.Text = "Kişi Güncelle";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(372, 283);
+            this.button4.Location = new System.Drawing.Point(394, 283);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 23);
+            this.button4.Size = new System.Drawing.Size(112, 23);
             this.button4.TabIndex = 14;
             this.button4.Text = "Kişi Sil";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(394, 312);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Kutucukları Temizle";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 357);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox5);
@@ -219,6 +234,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
